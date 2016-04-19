@@ -2,15 +2,15 @@
       <div class="row">
 
       <!--Make magic happen here Ruby!-->
-      <% @products.each do |taco| %>
+      <% @products.each do |product| %>
 
         <div class="col-sm-4">
           <div class="taco_single">
-            <h2><%= taco.name %></h2>
-            <p>Price: <%= taco.price %></p>
-            <a href="/products/<%= taco.id %>" title="View Taco"><img src="<%= taco.image %>" alt="<%= taco.name %>" class="img-responsive taco_single_image"></a>
-            <p>Description: <%= taco.description %></p>
-            <p>Rating: <span class="rating"><%= taco.rating %></span></p>
+            <h2><%= product.name %></h2>
+            <p>Price: <%= product.price %></p>
+            <a href="/products/<%= product.id %>" title="View product"><img src="<%= product.image %>" alt="<%= product.name %>" class="img-responsive taco_single_image"></a>
+            <p>Description: <%= product.description %></p>
+            <p>Rating: <span class="rating"><%= product.rating %></span></p>
           </div>
         </div>
       <% end %>
