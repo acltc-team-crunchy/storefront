@@ -13,15 +13,18 @@
 
 ActiveRecord::Schema.define(version: 20160420021422) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "products", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.decimal  "price",                     precision: 8, scale: 2
-    t.string   "image",       limit: 255
-    t.text     "description", limit: 65535
-    t.string   "rating",      limit: 255
-    t.datetime "created_at",                                                       null: false
-    t.datetime "updated_at",                                                       null: false
-    t.boolean  "status",      limit: 1,                             default: true
+    t.string   "name"
+    t.decimal  "price",       precision: 8, scale: 2
+    t.string   "image"
+    t.text     "description"
+    t.string   "rating"
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+    t.boolean  "status",                              default: true
   end
 
 end

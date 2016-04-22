@@ -1,4 +1,18 @@
+    <%= link_to "Price Lowest to Highest", "/products?sort=price&sort_order=asc" %>
+    <%= link_to "Price Highest to Lowest", "/products?sort=price&sort_order=desc" %>
+    <%= link_to "Show Products Less than $100", "/products?discount=true" %>
+    <%= link_to "Random Product", "/products/random" %>
+
+    <%= form_tag "/search", method: :post do %>
+      <%= label_tag :user_search, "Search" %>
+      <%= text_field_tag :user_search %>
+      <%= submit_tag "Search" %>
+    <% end %>
+
+
     <section>
+
+
       <div class="row">
 
       <!--Make magic happen here Ruby!-->
