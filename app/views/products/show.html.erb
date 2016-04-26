@@ -6,6 +6,7 @@
             <p>Price: <%= @product.price %> <%= @product.sale_message %></p>
             <img src="<%= @product.image %>" alt="<%= @product.name %>" class="img-responsive">
             <p>Description: <%= @product.description %></p>
+            <p>Supplier: <%= @product.supplier.name %></p>
             <p>Rating: <span class="rating"><%= @product.rating %></span></p>
             <p>Tax: <%= number_to_currency(@product.tax) %></p>
             <p>Total: <%= number_to_currency(@product.total) %></p>
