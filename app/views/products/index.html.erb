@@ -22,7 +22,7 @@
           <div class="taco_single">
             <h2><%= product.name %></h2>
             <p>Price: <%= product.price %></p>
-            <a href="/products/<%= product.id %>" title="View product"><img src="<%= product.image %>" alt="<%= product.name %>" class="img-responsive taco_single_image"></a>
+            <a href="/products/<%= product.id %>" title="View product"><img src="<%= product.images.first.image_url %>" alt="<%= product.name %>" class="img-responsive taco_single_image"></a>
             <p>Description: <%= product.description %></p>
             <p>Rating: <span class="rating"><%= product.rating %></span></p>
           </div>
