@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "/", to: 'products#index'
+  devise_for :users
+  root 'products#index'
   get "/products", to: 'products#index'
   get "/products/new", to: 'products#new'
   post "/products", to: 'products#create'
@@ -10,4 +11,7 @@ Rails.application.routes.draw do
   post "/search", to: 'products#search'
 
   get "/suppliers", to: 'suppliers#index'
+
+  post "/orders", to: 'orders#create'
+  get "/orders/:id", to: 'orders#show'
 end
