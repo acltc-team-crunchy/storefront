@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post "/search", to: 'products#search'
 
   get "/suppliers", to: 'suppliers#index'
+  get "/suppliers/new", to: 'suppliers#new'
 
   get "/carted_products", to: 'carted_products#index'
   post "/carted_products", to: 'carted_products#create'
