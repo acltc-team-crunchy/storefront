@@ -1,8 +1,8 @@
 class Product < ActiveRecord::Base
-  has_many :orders
   belongs_to :supplier
   has_many :images
-
+  has_many :carted_products
+  has_many :orders, through: :carted_products
 
   DISCOUNT_THRESHOLD = 50
   SALES_TAX = 0.09

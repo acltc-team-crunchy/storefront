@@ -8,7 +8,6 @@
               <img src="<%= image.image_url %>" class="img-responsive">
             <% end %>
             <p>Description: <%= @product.description %></p>
-            <p>Supplier: <%= @product.supplier.name %></p>
             <p>Rating: <span class="rating"><%= @product.rating %></span></p>
             <p>Tax: <%= number_to_currency(@product.tax) %></p>
             <p>Total: <%= number_to_currency(@product.total) %></p>
@@ -16,7 +15,7 @@
             <%= link_to "Delete", "/products/#{@product.id}", {method: :delete, class: "btn btn-danger" }%>
         </div>
 
-        <%= form_tag "/orders", method: :post do %>
+        <%= form_tag "/carted_products", method: :post do %>
           <div>
             <%= label_tag :quantity %>
             <%= text_field_tag :quantity %>
@@ -24,7 +23,7 @@
           <div>
             <%= hidden_field_tag :product_id, @product.id %>
           </div>
-          <%= submit_tag "Buy!" %>
+          <%= submit_tag "Add to Cart" %>
         <% end %>
       </div>
     </div>
