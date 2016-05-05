@@ -22,15 +22,16 @@ class ProductsController < ApplicationController
   end
 
   def new
-    # unless current_user && current_user.admin
-    #   redirect_to "/"
-    # end
+    @product = Product.new
   end
   def create
     @product = Product.new(id: params[:id], name: params[:name], price: params[:price], description: params[:description], rating: params[:rating], supplier_id: params[:supplier][:supplier_id])
-    @product.save
-    flash[:success] = "Taco made!"
-    redirect_to "/products/#{@product.id}"
+    if @product.save
+      flash[:success] = "Taco made!"
+      redirect_to "/products/#{@product.id}"
+    else
+      render :new
+    end
   end
 
   def edit

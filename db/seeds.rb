@@ -1,6 +1,4 @@
-User.create!([
-  {email: "mark@anyonecanlearntoccode.ocm", password: "password"}
-])
+
 Image.create!([
   {product_id: 1, image_url: "http://www.foodpeoplewant.com/wp-content/uploads/2009/09/Tacos-De-Cochinita-Pibil-1024x686.jpg"},
   {product_id: 2, image_url: "http://upload.wikimedia.org/wikipedia/commons/b/b5/01_Tacos_al_Pastor.jpg"},
@@ -10,9 +8,6 @@ Image.create!([
   {product_id: 6, image_url: "http://www.gimmesomeoven.com/wp-content/uploads/2012/09/crispy-slow-cooker-carnitas-2.jpg"},
   {product_id: 1, image_url: "https://d29vij1s2h2tll.cloudfront.net/~/media/images/taco-bell/products/heroes/22848_specialties_quesalupa_1400x800.jpg"},
   {product_id: 1, image_url: "http://www.beavermethodist.org/wp-content/uploads/tacooo-copy.jpg"}
-])
-Order.create!([
-  {user_id: 1, product_id: 1, quantity: 3, subtotal: "378.0", tax: "34.02", total: "412.02"}
 ])
 Product.create!([
   {name: "Cochinita Pibil", price: "126.0", description: "Mouthwatering, slow-cooked pork on a corn tortilla, served with queso fresco, pickled onions y cilantro!", rating: nil, status: true, supplier_id: 1},
