@@ -5,7 +5,7 @@ class Product < ActiveRecord::Base
   has_many :orders, through: :carted_products
 
   validates :name, :description, :price, presence: true
-  validates :price, numericality: {only_integer: true, greater_than: 0}
+  # validates :price, numericality: {only_integer: true, greater_than: 0}
   validates :name, uniqueness: true
 
   DISCOUNT_THRESHOLD = 50
